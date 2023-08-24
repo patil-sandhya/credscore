@@ -1,0 +1,18 @@
+{
+
+    "users":[
+        {
+            "id":"1",
+            "first_name":"sonika",
+            "last_name":"kanojia",
+            "dob":"10-9-1997",
+            "gender":"female",
+            "pan":"2379839494",
+            "pan_issue_date":"20-4-2019",
+            "mobile":"8976543578",
+            "email":"sonikakanojia534@gmail.com",
+            "password":"sonika@2223"
+
+        }
+    ]
+}
