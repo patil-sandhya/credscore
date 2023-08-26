@@ -16,7 +16,7 @@ const MainRoute = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/" element={<Home/>}></Route>
         <Route path="/Home" element={<Home />}></Route>
         <Route path="/login" element={<Loginpage />}></Route>
         <Route path="/info" element={<PersonalInfo />}></Route>

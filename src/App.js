@@ -9,7 +9,7 @@ import MainRoute from './Pages/MainRoute';
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      {/* <Navbar/> */}
 <MainRoute/>
     </div>
   );
