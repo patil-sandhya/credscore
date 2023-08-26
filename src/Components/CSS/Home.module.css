@@ -1,0 +1,12 @@
+.hiii {
+    
+    
+    @media (max-width: 1420px) {
+      display: flex;
+      
+    }
+    @media (max-width: 420px) {
+      display: grid;
+    
+    }
+  }
