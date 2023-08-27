@@ -3,14 +3,16 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { useNavigate } from "react-router-dom";
 import { register } from "../Redux/action";
+import { useToast } from "@chakra-ui/react";
 export function Registerpage() {
+  const toast = useToast()
 const dispatch=useDispatch()
     
   const user=useSelector((store)=>{
     return store.reducer.Register
   })
     const [data,setData]=useState({email:"",password:"",
-  firstname:"",lastname:"",dob:"",phone:"",gender:"",town:"",
+  firstname:"",lastname:"",dob:"",phone:"",gender:"",
   pan:"",pan_issue_date:""
   
   })
@@ -18,9 +20,27 @@ const dispatch=useDispatch()
     
     const handleformsubmit=(e)=>{
         e.preventDefault()
-      dispatch(register(data)
+       if(data.email && data.password && data.firstname && data.lastname && data.dob && data.phone && data.gender && data.pan && data.pan_issue_date){
+        dispatch(register(data))
+        toast({
+          title: 'Register SuccesFull',
+          // description: "We've created your account for you.",
+          status: 'success',
+          position: 'top',
+          duration: 3000,
+          isClosable: true,
+        })
+       }else{
+        toast({
+          title: `Kindely Fill All Details`,
+          position: 'top',
+          isClosable: true,
+          duration: 4000,
+        })
+       }
       
-      )
+      
+      
       
     }
   
@@ -48,8 +68,7 @@ const dispatch=useDispatch()
         <br />
         <input type="number" placeholder="Phone number" onChange={(e)=>{setData({...data,phone:e.target.value})}} />
         <br />
-        <input type="text" placeholder="Town" onChange={(e)=>{setData({...data,town:e.target.value})}} />
-        <br />
+
         
         <select className="button" onChange={(e)=>{setData({...data,gender:e.target.value})}} >
          <option value="male">Male</option>

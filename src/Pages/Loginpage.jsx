@@ -25,12 +25,24 @@ const location=useLocation()
    if(user.email==email && user.password==password){
     
     dispatch(login(user)).then(()=>{
-        alert("coming")
+        toast({
+            title: 'Login SuccesFull',
+            // description: "We've created your account for you.",
+            status: 'success',
+            position: 'top',
+            duration: 3000,
+            isClosable: true,
+          })
         navigate(location.state,{replace:true})
     })
    
    }else{
-    alert("no")
+    toast({
+        title: `User Not Found`,
+        position: 'top',
+        isClosable: true,
+        duration: 4000,
+      })
    }
     }
     
