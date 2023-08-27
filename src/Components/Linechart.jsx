@@ -10,8 +10,8 @@ function Monthchart() {
       {
         label: 'Monthly Overall Cibil Score',
         data: [700, 750, 650, 700, 702, 744,735,733,766,754,775,800],
-        backgroundColor: 'rgba(75, 192, 192, 0.6)',
-        borderColor: '#4035b8',
+        backgroundColor: '#adf7d8',
+        borderColor: '#adf7d8',
         borderWidth: 3,
       },
     ],
@@ -23,7 +23,7 @@ function Monthchart() {
   };
 
   return (
-    <div style={{width:"90%",height:"200px",marginLeft:"5%"}} >
+    <div style={{width:"90%",height:"200px",marginLeft:"5%",backgroundColor:"white",borderRadius:"10px"}} >
       <Line data={chartData} options={chartOptions}  />
     </div>
   );
