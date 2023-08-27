@@ -12,7 +12,7 @@ const dispatch=useDispatch()
     return store.reducer.Register
   })
     const [data,setData]=useState({email:"",password:"",
-  firstname:"",lastname:"",dob:"",phone:"",gender:"",
+  first_name:"",last_name:"",dob:"",mobile:"",gender:"",
   pan:"",pan_issue_date:""
   
   })
@@ -54,9 +54,9 @@ const dispatch=useDispatch()
         <br />
         <input type="password" placeholder="Create password" onChange={(e)=>{setData({...data,password:e.target.value})}} />
         <br />
-        <input type="text" placeholder="Firstname" onChange={(e)=>{setData({...data,firstname:e.target.value})}} />
+        <input type="text" placeholder="Firstname" onChange={(e)=>{setData({...data,first_name:e.target.value})}} />
         <br />
-        <input type="text" placeholder="Lastname" onChange={(e)=>{setData({...data,lastname:e.target.value})}} />
+        <input type="text" placeholder="Lastname" onChange={(e)=>{setData({...data,last_name:e.target.value})}} />
         <br />
         <input type="text" placeholder="Pan Number" onChange={(e)=>{setData({...data,pan:e.target.value})}} />
         <br />
@@ -66,7 +66,7 @@ const dispatch=useDispatch()
         <label htmlFor="">PAN ISSUE:-</label>
         <input className="button" type="date" placeholder="Lastname" onChange={(e)=>{setData({...data,pan_issue_date:e.target.value})}} />
         <br />
-        <input type="number" placeholder="Phone number" onChange={(e)=>{setData({...data,phone:e.target.value})}} />
+        <input type="number" placeholder="Phone number" onChange={(e)=>{setData({...data,mobile:e.target.value})}} />
         <br />
 
         
