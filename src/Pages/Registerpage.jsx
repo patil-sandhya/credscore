@@ -20,7 +20,7 @@ const dispatch=useDispatch()
     
     const handleformsubmit=(e)=>{
         e.preventDefault()
-       if(data.email && data.password && data.firstname && data.lastname && data.dob && data.phone && data.gender && data.pan && data.pan_issue_date){
+       if(data.email && data.password && data.first_name && data.last_name && data.dob && data.mobile && data.gender && data.pan && data.pan_issue_date){
         dispatch(register(data))
         toast({
           title: 'Register SuccesFull',

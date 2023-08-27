@@ -19,7 +19,7 @@ export const CalculateEMI = () => {
           <Button onClick={()=> handleEmi("home")} colorScheme="blue">Home Loan</Button>
           <Button onClick={()=> handleEmi("car")} colorScheme="green">Car Loan</Button>
           <Button onClick={()=> handleEmi("personal")} colorScheme="red">Personal Loan</Button>
-          <Button onClick={()=> handleEmi("other")} colorScheme="red">Other Loan</Button>
+          <Button onClick={()=> handleEmi("other")} colorScheme="facebook">Other Loan</Button>
         </Flex>
       </Box>
 

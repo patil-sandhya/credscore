@@ -94,21 +94,21 @@ export const Account = () => {
         }else{
             newData = [...loanData]
         }
-            console.log(acStatus)
+            //console.log(acStatus)
             if(acStatus === "ACTIVE"){
                 newData = newData.filter((item)=> item.status === true)
-                console.log("active",newData)
+                //console.log("active",newData)
             }else
             if(acStatus === "DORMANT"){
                 newData = newData.filter((item)=> item.status === false)
-                console.log("dorma",newData)
+                //console.log("dorma",newData)
             }
             if(acType === "CREDIT CARD"){
                if(order === "asc"){
                 newData.sort(function(a,b){
                     return  a.limit - b.limit
                  })
-                 console.log("sort data asc", newData)
+                // console.log("sort data asc", newData)
                  setData(newData)
                }else{
                 newData.sort(function(a,b){
@@ -122,7 +122,7 @@ export const Account = () => {
                     newData.sort(function(a,b){
                         return  a.amt - b.amt
                      })
-                     console.log("sort data asc", newData)
+                     //console.log("sort data asc", newData)
                      setData(newData)
                    }else{
                     newData.sort(function(a,b){
@@ -140,13 +140,13 @@ export const Account = () => {
                 newData.sort(function(a,b){
                     return  a.amt - b.amt
                     })
-                    console.log("sort data asc", newData)
+                    //console.log("sort data asc", newData)
                     setData(newData)
                 }else{
                     newData.sort(function(a,b){
                     return  b.amt - a.amt
                     })
-                    console.log("sort data asc", newData)
+                    //console.log("sort data asc", newData)
                     setData(newData)
                 }
             }else{
@@ -154,13 +154,13 @@ export const Account = () => {
                     newData.sort(function(a,b){
                         return  a.limit - b.limit
                         })
-                        console.log("sort data asc", newData)
+                        //console.log("sort data asc", newData)
                         setData(newData)
                     }else{
                         newData.sort(function(a,b){
                         return  b.limit - a.limit
                         })
-                        console.log("sort data asc", newData)
+                        //console.log("sort data asc", newData)
                         setData(newData)
                     }
             }
@@ -172,15 +172,15 @@ export const Account = () => {
             }else{
                 newData = [...loanData]
             }
-            console.log(acStatus)
+            //console.log(acStatus)
             if(acStatus === "ACTIVE"){
                 newData = newData.filter((item)=> item.status === true)
-                console.log("active",newData)
+                //console.log("active",newData)
                 setData(newData)
             }else
             if(acStatus === "DORMANT"){
                 newData = newData.filter((item)=> item.status === false)
-                console.log("dorma",newData)
+                //console.log("dorma",newData)
                 setData(newData)
             }
         }
@@ -206,9 +206,9 @@ export const Account = () => {
     },[acType])
     useEffect(()=>{
         handleData()
-        console.log(acStatus,order)
+        //console.log(acStatus,order)
     },[acStatus, order])
-    console.log(data)
+    //console.log(data)
 
   return (
     <Box h="100%">
