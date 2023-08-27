@@ -2,24 +2,36 @@ import React from 'react'
 import { Box,Heading,Stack,StackDivider, Text, Table,
     Thead,
     Tbody,
-    Tfoot,
     Tr,
     Th,
     Td,
     TableCaption,
     TableContainer, } from '@chakra-ui/react';
 import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
+import { useSelector } from 'react-redux';
+
 export const Personal = () => {
+  const userData = useSelector((store)=> store.reducer.Register)
+  //console.log(userData)
+
+  function formatDate(inputDate) {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const date = new Date(inputDate);
+    return date.toLocaleDateString(undefined, options);
+  }
+const formattedDOB = formatDate(userData.dob);
+const formattedPan = formatDate(userData.pan_issue_date);
+
   return (
-    <>
-    <Card>
-  <CardBody>
-    <Text textAlign="left">CIBIL score, also known as a credit score, is a numerical representation of an individual's creditworthiness. It is based on credit history and financial behavior, reflecting how likely a person is to repay loans and credit obligations.A higher CIBIL score indicates better creditworthiness, increasing the likelihood of loan approvals and favorable terms.</Text>
-  </CardBody>
-</Card>
-<br />
-    <Card>
-  <CardHeader>
+      <>
+      <Card>
+    <CardBody>
+      <Text textAlign="left">CIBIL score, also known as a credit score, is a numerical representation of an individual's creditworthiness. It is based on credit history and financial behavior, reflecting how likely a person is to repay loans and credit obligations.A higher CIBIL score indicates better creditworthiness, increasing the likelihood of loan approvals and favorable terms.</Text>
+    </CardBody>
+      </Card>
+      <br />
+     <Card>
+    <CardHeader>
     <Heading size='lg'>Personal Information</Heading>
   </CardHeader>
 
@@ -30,7 +42,7 @@ export const Personal = () => {
           Name
         </Heading>
         <Text pt='2' fontSize='lg'>
-          Luffy Doe
+          {userData.first_name} {userData.last_name}
         </Text>
       </Box>
       <Box>
@@ -38,7 +50,7 @@ export const Personal = () => {
           Email
         </Heading>
         <Text pt='2' fontSize='lg'>
-          luffy@gmail.com
+          {userData.email}
         </Text>
       </Box>
       <Box>
@@ -46,7 +58,7 @@ export const Personal = () => {
           DOB
         </Heading>
         <Text pt='2' fontSize='lg'>
-          January 10, 2001
+          {formattedDOB}
         </Text>
       </Box>
     </Stack>
@@ -66,10 +78,10 @@ export const Personal = () => {
     </Thead>
     <Tbody>
       <Tr>
-        <Td>ETRCC7857</Td>
-        <Td>30/05/2015</Td>
-        <Td>10, January, 2001</Td>
-        <Td>Male</Td>
+        <Td>{userData.pan}</Td>
+        <Td>{formattedPan}</Td>
+        <Td>{formattedDOB}</Td>
+        <Td>{userData.gender}</Td>
       </Tr>
       
     </Tbody>

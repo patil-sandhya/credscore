@@ -1,5 +1,4 @@
 
-import axios from "axios"
 import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS, REGISTER_SUCCESS } from "./actionTypes"
 
 export const login=(userData)=>(dispatch)=>{

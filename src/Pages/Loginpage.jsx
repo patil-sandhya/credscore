@@ -24,7 +24,7 @@ const location=useLocation()
         e.preventDefault()
    if(user.email==email && user.password==password){
     
-    dispatch(login(user)).then(()=>{
+    dispatch(login(user))
         toast({
             title: 'Login SuccesFull',
             // description: "We've created your account for you.",
@@ -33,8 +33,7 @@ const location=useLocation()
             duration: 3000,
             isClosable: true,
           })
-        navigate(location.state,{replace:true})
-    })
+        
    
    }else{
     toast({
