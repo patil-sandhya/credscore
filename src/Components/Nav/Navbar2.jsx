@@ -16,7 +16,7 @@ const Nav = styled.nav`
   }
 `
 
-const Navbar = () => {
+const Navbar2 = () => {
   return (
     <Nav>
       <div className="logo">
@@ -27,4 +27,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar2

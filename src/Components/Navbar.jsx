@@ -67,11 +67,11 @@ const Navbar = () => {
 
 
           <Button width="20%" height="100%" backgroundColor={bcolor}
-            marginRight="10px" border="none"  >Log In</Button>
+            marginRight="10px" border="none"  ><Link to="login">Log In</Link></Button>
 
           <Button width="20%" height="100%"
             border="none"
-            backgroundColor={bcolor}>Register</Button>
+            backgroundColor={bcolor}><Link to="register">Register</Link></Button>
 
         </Box>
 

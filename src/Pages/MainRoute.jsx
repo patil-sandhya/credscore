@@ -8,6 +8,9 @@ import {PersonalInfo} from "../Components/CreditReport/PersonalInfo";
 
 
 import Loginpage from "../Pages/Loginpage";
+import Homepage from "../Components/Homepage";
+import { Registerpage } from "./Registerpage";
+import { Privateroute } from "./Privateroute";
 
 
 
@@ -16,14 +19,12 @@ const MainRoute = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="/Home" element={<Home />}></Route>
+        <Route path="/" element={<Homepage/>}></Route>
+        <Route path="/home" element={<Privateroute><Home /></Privateroute>}></Route>
         <Route path="/login" element={<Loginpage />}></Route>
+        <Route path="/register" element={<Registerpage/>}></Route>
         <Route path="/info" element={<PersonalInfo />}></Route>
      
-      
-
-        
 
       </Routes>
     </div>

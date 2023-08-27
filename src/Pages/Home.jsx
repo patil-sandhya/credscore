@@ -4,14 +4,14 @@ import styles from "../Components/CSS/Home.module.css"
 import { Link } from "react-router-dom"
 import Linechart from "../Components/Linechart";
 import { Grid, GridItem } from '@chakra-ui/react'
-import Navbar from "../Components/Nav/Navbar";
+import Navbar from "../Components/Nav/Navbar2";
 import { Dashboard } from "../Components/Dashboard";
 
 export const Home=()=>{
   const [score,setScore]=useState(800)
     return (
         <div style={{backgroundColor: "#34eb9b"}}>
-    <Navbar/>
+   
 
           <div
        boxShadow= " rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px"

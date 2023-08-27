@@ -35,10 +35,10 @@ const Ul = styled.ul`
 const RightNav = ({ open }) => {
   return (
     <Ul  open={open}>
-      <li ><Link  style={{textDecoration:"none",fontSize:"large"}}>Home</Link></li>
-      <li >  <Link style={{textDecoration:"none",fontSize:"large"}} >About</Link></li>
-      <li><Link style={{textDecoration:"none",fontSize:"large"}} >Contact Us</Link></li>
-      <li><Link style={{textDecoration:"none",fontSize:"large"}} ><button>Logout</button></Link></li>
+      <li ><Link to="/home"  style={{textDecoration:"none",fontSize:"large"}}>Home</Link></li>
+      <li >  <Link style={{textDecoration:"none",fontSize:"large"}} >Offers</Link></li>
+      <li><Link to="/info" style={{textDecoration:"none",fontSize:"large"}} >Credit Report</Link></li>
+      <li><Link  style={{textDecoration:"none",fontSize:"large"}} ><button>Logout</button></Link></li>
 
     </Ul>
   )
