@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Image , HStack, Box, Button} from '@chakra-ui/react';
-import  logo from '../Images/project logo (1).png'
+// import  logo from '../Images/project logo (1).png'
 const  Navbar =()=>{
 
     return (
@@ -11,7 +11,7 @@ const  Navbar =()=>{
             justifyContent="center" >
               <Link to="/">
           <Box width="200px"  >
-            <Image src={logo} width="100%"  />
+            {/* <Image src={logo} width="100%"  /> */}
           </Box>
               </Link>
             </Box>
