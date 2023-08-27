@@ -12,7 +12,7 @@ const Navbar = () => {
     <>
 
       <HStack 
-        maxwidth="100%" height="50px"
+        maxwidth="100%" height="50px" backgroundColor={color} borderBottom="1px solid #adf7d8"
       >
         <Box width="25%" display="flex" 
           justifyContent="left" alignItems="center">
@@ -34,8 +34,8 @@ const Navbar = () => {
           >
             <Button width="100%" padding="8px 15px"
               border="none" borderRadius="30px"
-              color="black"
-              backgroundColor={bcolor}>Home</Button>
+              color={bcolor}
+              backgroundColor="black">Home</Button>
           </Link>
           <Link to="info">
 
@@ -76,7 +76,7 @@ const Navbar = () => {
         </Box>
 
       </HStack >
-      <Divider orientation='horizontal' color={color} />
+      {/* <Divider orientation='horizontal' color={color} /> */}
 
       
     </>
