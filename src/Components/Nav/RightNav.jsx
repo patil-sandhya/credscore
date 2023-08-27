@@ -1,6 +1,8 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { LOGOUT_SUCCESS } from '../../Redux/actionTypes';
 
 const Ul = styled.ul`
   list-style: none;
@@ -33,12 +35,18 @@ const Ul = styled.ul`
 `;
 
 const RightNav = ({ open }) => {
+  const dispatch=useDispatch()
+
+const Logout=()=>{
+dispatch({type:LOGOUT_SUCCESS})
+}
+
   return (
     <Ul  open={open}>
       <li ><Link to="/home"  style={{textDecoration:"none",fontSize:"large"}}>Home</Link></li>
       <li >  <Link style={{textDecoration:"none",fontSize:"large"}} >Offers</Link></li>
       <li><Link to="/info" style={{textDecoration:"none",fontSize:"large"}} >Credit Report</Link></li>
-      <li><Link  style={{textDecoration:"none",fontSize:"large"}} ><button>Logout</button></Link></li>
+      <li><Link  style={{textDecoration:"none",fontSize:"large"}} ><button onClick={Logout}>Logout</button></Link></li>
 
     </Ul>
   )
