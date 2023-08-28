@@ -7,6 +7,7 @@ import Navbar from './Components/Navbar';
 import MainRoute from './Pages/MainRoute';
 import { Registerpage } from './Pages/Registerpage';
 import Navbar2 from './Components/Nav/Navbar2';
+import Footer from './Components/Footer';
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
       {isAuth?(<Navbar2/>):(<Navbar/>)}
       
 <MainRoute/>
-
+<Footer/>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-
+import styles from "../Components/CSS/Home.module.css"
 import { useNavigate,useLocation, Navigate } from 'react-router-dom'
 import { useToast } from '@chakra-ui/react'
 import { Input,Text } from '@chakra-ui/react'
@@ -48,13 +48,13 @@ const location=useLocation()
     
 
     return (
-        <div >
+        <div style={{backgroundColor:"#c2fbd7"}} >
            
             {isAuth && <Navigate to="/home" />}
-            <h1 style={{fontWeight:"bold",marginTop:"20px"}}>Login Page</h1>
+            <h1 style={{fontWeight:"bold",paddingTop:"20px"}}>Login Page</h1>
             <form   onSubmit={HandleFormRequest}>
             
-                <Input w={200} mb={3} 
+                <Input w={200} mb={3}  bg={"white"} 
                 style={{marginTop:"20px",marginBottom:"10px"}}
                     type = "email"
                     
@@ -63,7 +63,7 @@ const location=useLocation()
                     onChange={(e)=>{setEmail(e.target.value)}}
                 />
                 <br />
-                <Input w={200} mb={3}
+                <Input w={200} mb={3} bg={"white"} 
                 style={{marginBottom:"10px"}}
                     type = "password"
                     
@@ -71,7 +71,7 @@ const location=useLocation()
                     onChange={(e)=>{setPassword(e.target.value)}}
                 />
                 <br />
-                <Input w={100} mb={3}className="button" type = "submit" />
+                <Input bg={"white"}  w={100} mb={40} className={styles.button} type = "submit" />
 
 
             </form>  
