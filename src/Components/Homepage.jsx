@@ -1,7 +1,7 @@
 import React from "react";
 import {Box,Button,Text,Heading,Grid,GridItem,Image, Center} from "@chakra-ui/react"
 // import { color } from "framer-motion";
-
+import Footer from "./Footer";
 export default function Homepage(){
   const bcolor = "#adf7d8"
   const color = "#34eb9b"
@@ -167,7 +167,7 @@ export default function Homepage(){
             </Center>
            
 
-      
+            <Footer/>
     </>
   )
 }

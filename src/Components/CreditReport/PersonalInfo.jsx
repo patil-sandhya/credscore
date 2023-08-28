@@ -42,7 +42,7 @@ export const PersonalInfo = () => {
         icon={<HamburgerIcon />}
         onClick={onOpen}
         position="fixed"
-        top="1rem"
+        top="3.5rem"
         left="1rem"
         zIndex="999"
       />

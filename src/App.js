@@ -20,7 +20,7 @@ function App() {
       {isAuth?(<Navbar2/>):(<Navbar/>)}
       
 <MainRoute/>
-<Footer/>
+
     </div>
   );
 }

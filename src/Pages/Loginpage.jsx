@@ -6,6 +6,7 @@ import { Input,Text } from '@chakra-ui/react'
 import { useDispatch, useSelector } from 'react-redux'
 import { LOGIN_SUCCESS } from '../Redux/actionTypes'
 import { login } from '../Redux/action'
+import Footer from '../Components/Footer'
 export default function Loginpage() {
     const dispatch=useDispatch()
     const user=useSelector((store)=>{
@@ -75,7 +76,7 @@ const location=useLocation()
 
 
             </form>  
-                          
+              <Footer />            
         </div>
     )
 }

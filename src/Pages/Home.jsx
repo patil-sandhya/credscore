@@ -6,7 +6,7 @@ import Linechart from "../Components/Linechart";
 import { Grid, GridItem } from '@chakra-ui/react'
 
 import { Dashboard } from "../Components/Dashboard";
-
+import Footer from "../Components/Footer";
 export const Home=()=>{
   const [score,setScore]=useState(800)
     return (
@@ -217,6 +217,7 @@ bg={"white"}
               </Box>
             </Box>
           </div>
+        <Footer />
           
         </div>
       );

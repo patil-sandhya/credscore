@@ -4,6 +4,7 @@ import styles from "../Components/CSS/Home.module.css"
 import { useNavigate } from "react-router-dom";
 import { register } from "../Redux/action";
 import { useToast,Input,Select } from "@chakra-ui/react";
+import Footer from "../Components/Footer";
 export function Registerpage() {
   const toast = useToast()
 const dispatch=useDispatch()
@@ -78,6 +79,7 @@ const dispatch=useDispatch()
         <br />
         <Input bg={"white"}  className={styles.button} w={200} mb={3}  type="submit" />
        </form>
+       <Footer />
       </div>
     );
   }
