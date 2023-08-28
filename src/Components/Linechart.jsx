@@ -11,7 +11,7 @@ function Monthchart() {
         label: 'Monthly Overall Cibil Score',
         data: [700, 750, 650, 700, 702, 744,735,733,766,754,775,800],
         backgroundColor: '#adf7d8',
-        borderColor: '#adf7d8',
+        borderColor: '#34eb9b',
         borderWidth: 3,
       },
     ],

@@ -1,10 +1,10 @@
-import { Box,Button, CircularProgress, CircularProgressLabel, HStack, Stack, Text } from "@chakra-ui/react"
+import {Image, Box,Button, CircularProgress, CircularProgressLabel, HStack, Stack, Text } from "@chakra-ui/react"
 import { useState } from "react";
 import styles from "../Components/CSS/Home.module.css"
 import { Link } from "react-router-dom"
 import Linechart from "../Components/Linechart";
 import { Grid, GridItem } from '@chakra-ui/react'
-import Navbar from "../Components/Nav/Navbar2";
+
 import { Dashboard } from "../Components/Dashboard";
 
 export const Home=()=>{
@@ -181,11 +181,12 @@ bg={"white"}
             </Box>
             <Box>
               <Box 
+             
                borderRadius={"10px"}
                margin={"3px"}
                className={styles.color}
               boxShadow= " rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px">
-                <img src="https://www.paisabazaar.com/PBHP/assets/images/credible.svg" alt="" />
+                <Image src="https://www.paisabazaar.com/PBHP/assets/images/credible.svg" alt="" />
                 <h2>Wide Choice</h2>
                 <p>We have partnerships with large banks, NBFCs and fintech lenders who offer a wide choice of products on our platform</p>
               </Box>
