@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 
 import { useNavigate,useLocation, Navigate } from 'react-router-dom'
 import { useToast } from '@chakra-ui/react'
-import { Input } from '@chakra-ui/react'
+import { Input,Text } from '@chakra-ui/react'
 import { useDispatch, useSelector } from 'react-redux'
 import { LOGIN_SUCCESS } from '../Redux/actionTypes'
 import { login } from '../Redux/action'
@@ -33,7 +33,8 @@ const location=useLocation()
             duration: 3000,
             isClosable: true,
           })
-        
+        navigate(location.state,{replace:true})
+    
    
    }else{
     toast({
@@ -47,11 +48,13 @@ const location=useLocation()
     
 
     return (
-        <div className='maindivv'>
+        <div >
+           
             {isAuth && <Navigate to="/home" />}
+            <h1 style={{fontWeight:"bold",marginTop:"20px"}}>Login Page</h1>
             <form   onSubmit={HandleFormRequest}>
             
-                <input
+                <Input w={200} mb={3} 
                 style={{marginTop:"20px",marginBottom:"10px"}}
                     type = "email"
                     
@@ -60,7 +63,7 @@ const location=useLocation()
                     onChange={(e)=>{setEmail(e.target.value)}}
                 />
                 <br />
-                <input
+                <Input w={200} mb={3}
                 style={{marginBottom:"10px"}}
                     type = "password"
                     
@@ -68,7 +71,7 @@ const location=useLocation()
                     onChange={(e)=>{setPassword(e.target.value)}}
                 />
                 <br />
-                <input className="button" type = "submit" />
+                <Input w={100} mb={3}className="button" type = "submit" />
 
 
             </form>  

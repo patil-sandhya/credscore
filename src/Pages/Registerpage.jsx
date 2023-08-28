@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { useNavigate } from "react-router-dom";
 import { register } from "../Redux/action";
-import { useToast } from "@chakra-ui/react";
+import { useToast,Input,Select } from "@chakra-ui/react";
 export function Registerpage() {
   const toast = useToast()
 const dispatch=useDispatch()
@@ -47,36 +47,36 @@ const dispatch=useDispatch()
   
  
     return (
-      <div className="maindivv" style={{}}>
-        <h1>Signup</h1>
+      <div >
+        <h1 style={{fontWeight:"bold",marginTop:"20px",marginBottom:"10px"}}>Register Page</h1>
        <form onSubmit={handleformsubmit} >
-        <input type="email" placeholder="Enter email" onChange={(e)=>{setData({...data,email:e.target.value})}} />
+        <Input w={200} mb={3} type="email" placeholder="Enter email" onChange={(e)=>{setData({...data,email:e.target.value})}} />
         <br />
-        <input type="password" placeholder="Create password" onChange={(e)=>{setData({...data,password:e.target.value})}} />
+        <Input w={200} mb={3} type="password" placeholder="Create password" onChange={(e)=>{setData({...data,password:e.target.value})}} />
         <br />
-        <input type="text" placeholder="Firstname" onChange={(e)=>{setData({...data,first_name:e.target.value})}} />
+        <Input w={200} mb={3}type="text" placeholder="Firstname" onChange={(e)=>{setData({...data,first_name:e.target.value})}} />
         <br />
-        <input type="text" placeholder="Lastname" onChange={(e)=>{setData({...data,last_name:e.target.value})}} />
+        <Input w={200} mb={3} type="text" placeholder="Lastname" onChange={(e)=>{setData({...data,last_name:e.target.value})}} />
         <br />
-        <input type="text" placeholder="Pan Number" onChange={(e)=>{setData({...data,pan:e.target.value})}} />
+        <Input w={200} mb={3} type="text" placeholder="Pan Number" onChange={(e)=>{setData({...data,pan:e.target.value})}} />
         <br />
         <label htmlFor="">DOB:-</label>
-        <input className="button" type="date" placeholder="Lastname" onChange={(e)=>{setData({...data,dob:e.target.value})}} />
+        <Input w={200} mb={3} className="button" type="date" placeholder="Lastname" onChange={(e)=>{setData({...data,dob:e.target.value})}} />
         <br />
         <label htmlFor="">PAN ISSUE:-</label>
-        <input className="button" type="date" placeholder="Lastname" onChange={(e)=>{setData({...data,pan_issue_date:e.target.value})}} />
+        <Input w={200} mb={3} className="button" type="date" placeholder="Lastname" onChange={(e)=>{setData({...data,pan_issue_date:e.target.value})}} />
         <br />
-        <input type="number" placeholder="Phone number" onChange={(e)=>{setData({...data,mobile:e.target.value})}} />
+        <Input w={200} mb={3} type="number" placeholder="Phone number" onChange={(e)=>{setData({...data,mobile:e.target.value})}} />
         <br />
 
-        
-        <select className="button" onChange={(e)=>{setData({...data,gender:e.target.value})}} >
+        <Select w={200} ml={"45%"} onChange={(e)=>{setData({...data,gender:e.target.value})}} >
+         <option value="">Select Gender</option>
          <option value="male">Male</option>
          <option value="female">Female</option>
          <option value="Other">Other</option>
-        </select>
+        </Select>
         <br />
-        <input className="button" type="submit" />
+        <Input w={200} mb={3} className="button" type="submit" />
        </form>
       </div>
     );

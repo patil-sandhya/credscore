@@ -3,14 +3,14 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { LOGOUT_SUCCESS } from '../../Redux/actionTypes';
-
+import styles from '../CSS/Home.module.css'
 const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
-
+  
   li {
-    padding: 0px 20px;
+    padding: 7px 20px;
    
   }
  
@@ -30,6 +30,7 @@ const Ul = styled.ul`
 
     li {
       color: #fff;
+    
     }
   }
 `;
@@ -43,10 +44,14 @@ dispatch({type:LOGOUT_SUCCESS})
 
   return (
     <Ul  open={open}>
-      <li ><Link to="/home"  style={{textDecoration:"none",fontSize:"large"}}>Home</Link></li>
-      <li >  <Link style={{textDecoration:"none",fontSize:"large"}} >Offers</Link></li>
-      <li><Link to="/info" style={{textDecoration:"none",fontSize:"large"}} >Credit Report</Link></li>
-      <li><Link  style={{textDecoration:"none",fontSize:"large"}} ><button onClick={Logout}>Logout</button></Link></li>
+      <li ><button className={styles.button}><Link to="/home"  style={{textDecoration:"none",fontSize:"large"}}>Home</Link></button></li>
+      <li ><button className={styles.button}><Link style={{textDecoration:"none",fontSize:"large"}} >Offers</Link></button></li>
+      <li ><button className={styles.button}><Link to="/info" style={{textDecoration:"none",fontSize:"large"}} >Credit Report</Link></button></li>
+      <li ><button className={styles.button}><Link  style={{textDecoration:"none",fontSize:"large"}} ><button onClick={Logout}>Logout</button></Link></button></li>
+      
+      
+      
+
 
     </Ul>
   )
