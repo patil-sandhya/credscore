@@ -36,10 +36,9 @@ bg={"#adf7d8"}
             bg={"#adf7d8"}
             
             p='10px'   flexDirection={"column"}  gap={"20px"}>
-              <Text as='h2'>Where You Now</Text>
+              <Text as='h2'>CIBIL</Text>
               <Text fontSize='14px' as='p'>
-                See how your CIBIL Score  with the rest of the
-                self-monitoring consumers.
+               Your CIBIL score is a 3-digit number that measures your credit health. click know more to learn 
               </Text>
              <button className={styles.button}>Know More</button>
             </Box>
