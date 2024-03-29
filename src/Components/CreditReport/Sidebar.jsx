@@ -3,7 +3,7 @@ import { Box, Flex, Icon,Heading, VStack } from '@chakra-ui/react';
 
 function Sidebar({ onItemClick }) {
   return (
-    <Flex height="100%">
+    <Flex height="100%" mt={-1}>
     <Box width="100%" bg="#34eb9b" color="white" p="4" paddingTop="20%">
       <VStack spacing="4" align="flex-start">
         {/* Personal Information */}

@@ -15,7 +15,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <Box padding={"30px 30px 10px 30px"} bg="#101010" color="white">
+    <Box padding={"30px 30px 10px 30px"} bg="#90cdc3">
       <Stack
         direction={{ base: "column", md: "row", lg: "row" }}
         justifyContent={"space-around"}
@@ -79,7 +79,7 @@ const Footer = () => {
         alignItems={{ base: "flex-start", md: "center", lg: "center" }}
         direction={{ base: "column", md: "row", lg: "row" }}
       >
-        <Text>© 2023 spendwise, All rights reserved</Text>
+        <Text>© 2023 CredScore, All rights reserved</Text>
         <Stack direction={"row"} spacing={6}>
           <FaTwitter className="footer-icon" />
           <FaYoutube className="footer-icon" />

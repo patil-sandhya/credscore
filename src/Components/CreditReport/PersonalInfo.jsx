@@ -42,9 +42,10 @@ export const PersonalInfo = () => {
         icon={<HamburgerIcon />}
         onClick={onOpen}
         position="fixed"
-        top="3.5rem"
+        
         left="1rem"
         zIndex="999"
+        mt={2}
       />
     )}
 
@@ -70,9 +71,9 @@ export const PersonalInfo = () => {
       <Text fontSize="20px" paddingLeft="10px">Your CIBIL Score Is 899</Text>
       </div>
       
-      {activeSection === 'personal' && (<Box width="100%" padding="30px" bg="gray.200"><Personal /></Box>)}
-      {activeSection === 'account' && (<Box width="100%" padding="30px" bg="gray.200"><Account /></Box>)}
-      {activeSection === 'calculateEMI' && (<Box width="100%" padding="30px" bg="gray.200"><CalculateEMI /></Box>)}
+      {activeSection === 'personal' && (<Box width="100%" padding="30px" bg="#c2fbd7"><Personal /></Box>)}
+      {activeSection === 'account' && (<Box width="100%" padding="30px" bg="#c2fbd7"><Account /></Box>)}
+      {activeSection === 'calculateEMI' && (<Box width="100%" padding="30px" bg="#c2fbd7"><CalculateEMI /></Box>)}
     </Box>
     </Grid>
   )

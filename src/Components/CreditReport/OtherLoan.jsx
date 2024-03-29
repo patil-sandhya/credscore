@@ -76,7 +76,7 @@ export const OtherLoan = () => {
     {/* Left Section */}
     <Box
       w={isSmallerThan600 ? '100%' : '40%'}
-      bg="blue.200"
+      bg="#90cdc3"
       p="4"
       mb={isSmallerThan600 ? '4' : '0'} // Add margin bottom on mobile
     >

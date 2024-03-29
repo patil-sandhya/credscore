@@ -7,6 +7,38 @@ import { useDispatch, useSelector } from 'react-redux'
 import { LOGIN_SUCCESS } from '../Redux/actionTypes'
 import { login } from '../Redux/action'
 import Footer from '../Components/Footer'
+import styled from 'styled-components'
+
+
+const Login = styled.form`
+margin-top: -2px;
+  h1{
+    font-size: 50px
+  }
+
+  .formdiv{
+    display: flex;
+    flex-direction: column;
+align-items: center;
+justify-content: center;
+  }
+  form{
+    background-color: #90cdc3;
+    border: none;
+    width:30%;
+    border-radius: 15px;
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+Input{
+  border: none;
+}
+
+`
+
 export default function Loginpage() {
     const dispatch=useDispatch()
     const user=useSelector((store)=>{
@@ -49,10 +81,12 @@ const location=useLocation()
     
 
     return (
+      <Login>
         <div style={{backgroundColor:"#c2fbd7"}} >
            
             {isAuth && <Navigate to="/home" />}
-            <h1 style={{fontWeight:"bold",paddingTop:"20px"}}>Login Page</h1>
+            <h1>Login Page</h1>
+            <div className='formdiv'>
             <form   onSubmit={HandleFormRequest}>
             
                 <Input w={200} mb={3}  bg={"white"} 
@@ -60,7 +94,7 @@ const location=useLocation()
                     type = "email"
                     
                     data-testid = "email"
-                    placeholder = "abc@gmail.com"
+                    placeholder = "Email"
                     onChange={(e)=>{setEmail(e.target.value)}}
                 />
                 <br />
@@ -68,7 +102,7 @@ const location=useLocation()
                 style={{marginBottom:"10px"}}
                     type = "password"
                     
-                    placeholder = "12345"
+                    placeholder = "Passoword"
                     onChange={(e)=>{setPassword(e.target.value)}}
                 />
                 <br />
@@ -76,7 +110,9 @@ const location=useLocation()
 
 
             </form>  
+            </div>
               <Footer />            
         </div>
+        </Login>
     )
 }

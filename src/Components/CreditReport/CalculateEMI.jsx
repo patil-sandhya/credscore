@@ -14,7 +14,7 @@ export const CalculateEMI = () => {
   return (
     <Box h="100%">
       {/* Top Section */}
-      <Box h="30%" bg="gray.200" p="4">
+      <Box h="30%" bg="#c2fbd7" p="4">
         <Flex justify="space-around">
           <Button onClick={()=> handleEmi("home")} colorScheme="blue">Home Loan</Button>
           <Button onClick={()=> handleEmi("car")} colorScheme="green">Car Loan</Button>

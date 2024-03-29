@@ -10,7 +10,7 @@ const creditCard=[
         id:1,
         limit:40000,
         name:"YES Bank Cashback Plus",
-        img:"https://www.yesbank.in/content/published/api/v1.1/assets/CONT3B2FEC28787241D58F0F0EFA32E93C17/native?cb=_cache_835d&channelToken=21f7ccfa2fc3401091938f541a6f8f2a",
+        img:"https://waytobank.com/images/Yes%20Prosperity%20Business.png",
         lpDate:"21 May 2021",
         lpAmt: 7000,
         pdue:0,
@@ -213,7 +213,7 @@ export const Account = () => {
   return (
     <Box h="100%">
       {/* Top Section */}
-      <Box h="30%" bg="gray.200" p="4">
+      <Box h="30%" bg="#c2fbd7" p="4">
         <Flex justify="space-around">
           <Button colorScheme="blue" onClick={()=> handleAccount("CREDIT CARD")} >CREDIT CARD</Button>
           <Button colorScheme="green" onClick={()=> handleAccount("LOAN")}>LOAN</Button>

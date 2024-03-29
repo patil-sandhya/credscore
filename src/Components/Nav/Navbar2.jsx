@@ -1,19 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import Burger from './Burger';
-import logo from "./logo.png"
+import logo from '../../Images/logo.ico'
+
 const Nav = styled.nav`
   width: 100%;
-  height: 55px;
+  height: 60px;
   border-bottom: 2px solid #f1f1f1;
   padding-bottom: 5px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #34eb9b;
-
-  .logo {
-    padding: 15px 0;
-  }
 `
 
 const Navbar2 = () => {

@@ -1,86 +1,44 @@
-import { Link } from "react-router-dom";
-import { Image, HStack, Box, Button, Divider } from '@chakra-ui/react';
+import React from 'react';
+import styled from 'styled-components';
+import Burger from './Nav/Burger';
 import logo from '../Images/logo.ico'
-import { useState } from "react";
+import { useSelector } from 'react-redux/es';
 
-const Navbar = () => {
+const Nav = styled.nav`
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px solid #f1f1f1;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #34eb9b;
+  
+  img{
+    padding-top:10px
+  }
 
-  const bcolor = "#adf7d8"
-  const color = "#34eb9b"
+  h2{
+    font-weight: bold;
+  }
+`
 
+const Navbar2 = () => {
+ // const isAuth = useSelector((store)=> store.reducer.isAuth)
   return (
-    <>
-
-      <HStack 
-        maxwidth="100%" height="50px" backgroundColor={color} borderBottom="1px solid #adf7d8"
-      >
-        <Box width="25%" display="flex" 
-          justifyContent="left" alignItems="center">
-          <Link to="/">
-            <Box width="200px" alignItems="center" paddingTop="10px" >
-              <Image src={logo} width="100%" height="100%" />
-            </Box>
-          </Link>
-        </Box>
-        <Box width="50%" display="flex"
-          justifyContent="space-evenly"
-          alignItems="center"
-          fontSize="18px"
-          fontWeight="600"
-        >
-
-
-          <Link to="home"
-          >
-            <Button width="100%" padding="8px 15px"
-              border="none" borderRadius="30px"
-              color={bcolor}
-              backgroundColor="black">Home</Button>
-          </Link>
-          <Link to="info">
-
-            <Button width="100%" padding="8px 15px"
-              border="none" borderRadius="30px"
-              color="black"
-              backgroundColor={bcolor}> CreditReport</Button>
-          </Link>
-          <Link to="info">
-
-            <Button width="100%" padding="8px 15px"
-              border="none" borderRadius="30px"
-              color="black"
-              backgroundColor={bcolor}>  CreditEducation</Button>
-          </Link>
-          <Link to="blog">
-
-            <Button width="100%" padding="8px 15px"
-              border="none" borderRadius="30px"
-              color="black"
-              backgroundColor={bcolor}>Blog</Button>
-          </Link>
-        </Box>
-        <Box width="25%" display="flex"
-          justifyContent="center"
-          alignItems="center"
-          height="100%"
-        >
-
-
-          <Button width="20%" height="100%" backgroundColor={bcolor}
-            marginRight="10px" border="none"  ><Link to="login">Log In</Link></Button>
-
-          <Button width="20%" height="100%"
-            border="none"
-            backgroundColor={bcolor}><Link to="register">Register</Link></Button>
-
-        </Box>
-
-      </HStack >
-      {/* <Divider orientation='horizontal' color={color} /> */}
-
+    <Nav>
+    
+      <div className="logo">
+      <a href="/">
+        <img src={logo} width="100%" height="100%" />
+        
+        </a>
+       
+      </div>
       
-    </>
+      <Burger />
+    </Nav>
   )
 }
 
-export default Navbar;
+export default Navbar2
