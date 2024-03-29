@@ -85,7 +85,7 @@ const location=useLocation()
         <div style={{backgroundColor:"#c2fbd7"}} >
            
             {isAuth && <Navigate to="/home" />}
-            <h1>Login Page</h1>
+            <h1>Login to your account</h1>
             <div className='formdiv'>
             <form   onSubmit={HandleFormRequest}>
             

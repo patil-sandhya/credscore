@@ -98,7 +98,7 @@ export function Registerpage() {
     <Register>
     <div style={{ backgroundColor: "#c2fbd7" }}>
       <h1>
-        Register Page
+        Register Here
       </h1>
       <div className="formdiv">
       <form onSubmit={handleformsubmit}>
@@ -158,6 +158,7 @@ export function Registerpage() {
           onChange={(e) => {
             setData({ ...data, pan: e.target.value });
           }}
+          maxLength={10}
         />
         <br />
         <div className="twoInput">
