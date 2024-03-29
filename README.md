@@ -23,7 +23,7 @@ Rest assured, your data is protected with the highest level of security measures
 https://coruscating-salmiakki-702061.netlify.app/
 
 ## Run this project -
-npm install
+npm install <br>
 npm start
 
 ## Our Collaborators
